@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TECH-ALPHA Solutions - Portfolio</title>
+  <meta name="description"
+    content="TECH-ALPHA Solutions - Innovating IT with Web Development, Mobile Apps,  and Graphic Design.">
+
+  <style>
+    /* Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+    }
+
+    /* Header */
+    header {
+      background: linear-gradient(135deg, #2c3e50, #34495e);
+      color: white;
+      padding: 30px 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+      letter-spacing: 2px;
+    }
+
+    /* Navigation (Sticky) */
+    nav {
+      background: #34495e;
+      padding: 12px;
+      text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    nav a {
+      color: white;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s, transform 0.3s;
+    }
+
+    nav a:hover {
+      color: #f39c12;
+      transform: scale(1.1);
+    }
+
+    /* Sections */
+    section {
+      padding: 50px 20px;
+    }
+
+    section h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      font-size: 2rem;
+      position: relative;
+    }
+
+    section h2::after {
+      content: '';
+      display: block;
+      width: 80px;
+      height: 3px;
+      background: #f39c12;
+      margin: 10px auto 0;
+    }
+
+    /* Services */
+    #services {
+      background: #ecf0f1;
+    }
+
+    .service-box {
+      flex: 1 1 250px;
+      background: white;
+      padding: 20px;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      text-align: center;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .service-box:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+    }
+
+    /* Portfolio */
+    .portfolio-item {
+      flex: 1 1 250px;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      overflow: hidden;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .portfolio-item img {
+      width: 100%;
+      display: block;
+      transition: transform 0.4s;
+    }
+
+    .portfolio-item:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    .portfolio-item:hover img {
+      transform: scale(1.1);
+    }
+
+    .portfolio-item figcaption {
+      padding: 10px;
+      background: #f4f4f4;
+      font-weight: bold;
+    }
+
+    .portfolio-item a {
+      display: block;
+      padding: 8px;
+      background: #2c3e50;
+      color: white;
+      text-decoration: none;
+      transition: background 0.3s;
+    }
+
+    .portfolio-item a:hover {
+      background: #f39c12;
+    }
+
+    /* Contact Form */
+    #contact {
+      background: #ecf0f1;
+    }
+
+    form {
+      max-width: 500px;
+      margin: auto;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    form label {
+      font-weight: bold;
+    }
+
+    form input,
+    form textarea {
+      padding: 12px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      transition: border 0.3s, box-shadow 0.3s;
+    }
+
+    form input:focus,
+    form textarea:focus {
+      border: 1px solid #f39c12;
+      box-shadow: 0 0 5px #f39c12;
+      outline: none;
+    }
+
+    form button {
+      padding: 12px;
+      background: #2c3e50;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    form button:hover {
+      background: #f39c12;
+    }
+
+    /* Footer */
+    footer {
+      background: #2c3e50;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      font-size: 0.9rem;
+    }
+
+    footer a {
+      color: #f39c12;
+      text-decoration: none;
+      margin: 0 8px;
+      transition: color 0.3s;
+    }
+
+    footer a:hover {
+      color: white;
+    }
+
+    /* Flex Layouts */
+    .flex-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      nav a {
+        display: inline-block;
+        margin: 8px;
+      }
+
+      header h1 {
+        font-size: 1.8rem;
+      }
+
+      section h2 {
+        font-size: 1.5rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Header Section -->
+  <header>
+    <h1>TECH-ALPHA Solutions</h1>
+    <p>Innovating IT for a Smarter Tomorrow</p>
+  </header>
+
+  <!-- Navigation -->
+  <nav>
+    <a href="#about" aria-label="About Us">About</a>
+    <a href="#services" aria-label="Our Services">Services</a>
+    <a href="#portfolio" aria-label="Our Portfolio">Portfolio</a>
+    <a href="#contact" aria-label="Contact Us">Contact</a>
+  </nav>
+
+  <!-- About Section -->
+  <section id="about">
+    <h2>About Us</h2>
+    <p style="max-width:800px; margin:auto;">We are a leading IT company specializing in web development, mobile apps,
+      and Graphic Designing. Our mission is to deliver innovative and reliable technology services that help businesses
+      grow.</p>
+  </section>
+
+  <!-- Services Section -->
+  <section id="services">
+    <h2>Our Services</h2>
+    <div class="flex-container">
+      <div class="service-box">
+        <h3>Web Development</h3>
+        <p>Responsive websites and web apps tailored to your business needs.</p>
+      </div>
+      <div class="service-box">
+        <h3>Mobile Apps</h3>
+        <p>Cross-platform mobile applications for Android and iOS.</p>
+      </div>
+      <div class="service-box">
+        <h3>Graphic Designing</h3>
+        <p>Secure and professional graphic designs for websites and businesses.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Portfolio Section -->
+  <section id="portfolio">
+    <h2>Our Work</h2>
+    <div class="flex-container">
+      <figure class="portfolio-item">
+        <img
+          src="https://assets.awwwards.com/awards/media/cache/thumb_880_660/submissions/2025/08/689b483758b70823340812.jpg"
+          alt="Modern e-commerce website design">
+        <a href="https://www.olivercabell.com/" target="_blank" rel="noopener noreferrer">Open Oliver-Cabell</a>
+        <figcaption>Project 1 - E-commerce Website</figcaption>
+      </figure>
+      <figure class="portfolio-item">
+        <img src="https://fireart.studio/wp-content/uploads/2021/09/7-81.jpg" alt="Mobile banking app interface design">
+        <a href="https://www.robertsonbanking.com/" target="_blank" rel="noopener noreferrer">Open Robertson</a>
+        <figcaption>Project 2 - Mobile Banking App</figcaption>
+      </figure>
+      <figure class="portfolio-item">
+        <img src="https://assets.awwwards.com/awards/submissions/2025/08/68af13d98621f852628699.jpg"
+          alt="Creative graphic design project">
+        <a href="https://www.olhalazarieva.com/" target="_blank" rel="noopener noreferrer">Open Olhalazarieva</a>
+        <figcaption>Project 3 - Graphic Designing</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <form>
+      <label for="name">Your Name</label>
+      <input id="name" type="text" name="name" placeholder="Enter your name" required>
+
+      <label for="email">Your Email</label>
+      <input id="email" type="email" name="email" placeholder="Enter your email" required>
+
+      <label for="message">Your Message</label>
+      <textarea id="message" name="message" placeholder="Enter your message" required></textarea>
+
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 TECH-ALPHA Solutions | All Rights Reserved</p>
+    <p>
+      <a href="#about">About</a> |
+      <a href="#services">Services</a> |
+      <a href="#portfolio">Portfolio</a> |
+      <a href="#contact">Contact</a>
+    </p>
+  </footer>
+
+</body>
+
+</html>
